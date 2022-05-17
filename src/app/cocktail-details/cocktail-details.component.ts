@@ -11,8 +11,8 @@ import { Cocktail } from '../models/cocktail.model';
   styleUrls: ['./cocktail-details.component.scss']
 })
 export class CocktailDetailsComponent implements OnInit {
-  id: string;
-  cocktails$: Observable<Cocktail[]>;
+  
+  cocktail$: Observable<Cocktail>;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -20,9 +20,12 @@ export class CocktailDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.paramMap.pipe(
-      switchMap(paramsMap => this.id = paramsMap.get('id'))
-    ).subscribe();
+    this.cocktail$ = this.activatedRoute.paramMap.pipe(
+      delay(2000),
+      switchMap(paramsMap => {
+        const id = paramsMap.get('id');
+        return this.cocktailService.getById(id);
+      })
   }
 
 }
