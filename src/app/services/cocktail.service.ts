@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, delay } from 'rxjs/operators';
 import { Cocktail } from '../models/cocktail.model';
+import { CocktailService } from '../services/cocktail.service';
 
 interface CocktailDbDrink {
   idDrink: string;
@@ -52,6 +53,7 @@ export class CocktailService {
     const url = `${CocktailService.baseUrl}/lookup.php?i=${id}`;
     return this.http.get(url)
       .pipe(
+        delay(3000),
         map((result: CocktailDbResult) => this.mapResultToModel(result)),
         map((drinks: Array<Cocktail>) => {
           if (!drinks.length) {
