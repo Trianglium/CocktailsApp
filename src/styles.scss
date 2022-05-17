@@ -1,1 +1,111 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@cds/core/global.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
+
+// Theme 
+$soft-black: #222;
+$persian-pink: #f87c96;
+$alabaster-yellow: #f3f1e6;
+$petite-orchid: #e29896;
+$viking-blue: #4ab2c1;
+$light-purple: #bfa1d0;
+$dark-purple: #8f7ca1;
+
+
+// Layout and Structure 
+html, body {
+    font-weight: 400;
+    font-size: 1.3em;
+    color: $soft-black;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+.flex-display-container {
+    margin: 20px;
+    padding: 1em;
+    display:flex;
+    width: 100%;
+}
+.block-container {
+    margin: 20px;
+    padding: 1em;
+    display:block;
+}
+.jumbotron {
+    padding: 2rem 2rem;
+    margin-bottom: .1rem;
+    border-radius: .3rem;
+  }
+
+// NavBar
+.navbar {
+    display: block;
+    a {
+        text-decoration: none;
+    }
+    .branding {
+        float: left;
+        display: inline-block;
+        padding: .5em .5em;
+        margin: .5em .5em;
+        text-decoration: none;
+        font-weight: 800;
+    }
+    .header-nav {
+        background-color: $petite-orchid;
+        .nav-link {
+            display: inline-block;
+            padding: .5em .25em;
+            margin: .5em .5em;
+            text-decoration: none;
+            float: right;
+            font-weight: 600;
+            .title {
+                float: left;
+            }
+        }
+    }
+}
+
+
+// Text Elements
+.text-center {
+	text-align: center;
+}
+.font-sacromento {
+    font-family: 'Sacramento', cursive;
+}
+.font-monstserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+.text-light {
+	color: #fff;
+}
+.text-dark {
+	color: $soft-black;
+}
+.text-danger {
+    color: $persian-pink;
+}
+.text-warning {
+    color: $petite-orchid;
+}
+.text-info {
+    color: $viking-blue
+}
+.text-success {
+    color: $dark-purple;
+}
+
+// Background colors
+.bg-orchid {
+    background-color: $petite-orchid;
+}
+.bg-dark {
+    background-color: $soft-black;
+    color: #fff;
+}
+
+
+
