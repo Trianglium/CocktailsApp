@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CocktailService } from '../services/cocktail.service';
+import { Cocktail } from '../models/cocktail.model';
+
+@Component({
+  selector: 'app-cocktails-list',
+  templateUrl: './cocktails-list.component.html',
+  styleUrls: ['./cocktails-list.component.scss']
+})
+export class CocktailsListComponent implements OnInit {
+  cocktails$: Observable<Cocktail[]>;
+
+  constructor(private cocktailService: CocktailService) { }
+
+  ngOnInit(): void {
+    this.cocktails$ = this.cocktailService.listByFirstLetter('b');
+  }
+
+}
