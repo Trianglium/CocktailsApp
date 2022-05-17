@@ -4,6 +4,7 @@ import { CocktailsListComponent } from './cocktails-list/cocktails-list.componen
 import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { HomeComponent } from './home/home.component';
+import { CocktailDetailsResolver } from './resolvers/cocktail-details.resolver';
 const routes: Routes = [
   {
     path: 'home',
@@ -19,7 +20,10 @@ const routes: Routes = [
   },
   {
     path: 'cocktail-details/:id',
-    component: CocktailDetailsComponent
+    component: CocktailDetailsComponent,
+    resolve: {
+      cocktail: CocktailDetailsResolver
+    }
   },
   {
     path: '',
