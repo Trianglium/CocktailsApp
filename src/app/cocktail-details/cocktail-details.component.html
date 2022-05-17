@@ -1,9 +1,10 @@
 <div class="container mt-4 pt-4">
     <div class="jumbotron">
-        <div class="card">
+        <div class="card" *ngIf="cocktail">
             <div class="card-body">
-            <h2 class="card-title">Cocktail #{{ id }}</h2>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <h2 class="card-title">{{ cocktail.name }}</h2>
+            <p class="card-text">{{ cocktail.category }} {{ cocktail.alcoholic }}</p>
+            <p class="card-text">{{ cocktail.ingredients }}</p>
             <a class="nav-link nav-text" class="btn btn-info">Back to Cocktails</a>
             </div>
         </div>
