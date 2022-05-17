@@ -5,12 +5,20 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { Cocktail } from '../models/cocktail.model';
+import { CocktailService } from '../services/cocktail.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CocktailDetailsResolver implements Resolve<boolean> {
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
-    return of(true);
+
+export class CocktailDetailsResolver implements Resolve<Observable<Cocktail>> {
+  constructor(private cocktailService: CocktailService) {}
+  
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Cocktail> {
+    const id = route.paramMap.get('id');
+
+    return this.cocktailService.getById('id');
+
   }
 }

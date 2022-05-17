@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable, delay } from 'rxjs';
 import { CocktailService } from '../services/cocktail.service';
 import { Cocktail } from '../models/cocktail.model';
 
@@ -26,6 +26,7 @@ export class CocktailDetailsComponent implements OnInit {
         const id = paramsMap.get('id');
         return this.cocktailService.getById(id);
       })
+    )
   }
 
 }
