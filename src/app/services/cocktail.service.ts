@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, delay } from 'rxjs/operators';
 import { Cocktail } from '../models/cocktail.model';
-import { CocktailService } from '../services/cocktail.service';
+import { Ingredient } from '../models/ingredient.model';
 
 interface CocktailDbDrink {
   idDrink: string;
@@ -53,7 +53,6 @@ export class CocktailService {
     const url = `${CocktailService.baseUrl}/lookup.php?i=${id}`;
     return this.http.get(url)
       .pipe(
-        delay(3000),
         map((result: CocktailDbResult) => this.mapResultToModel(result)),
         map((drinks: Array<Cocktail>) => {
           if (!drinks.length) {
@@ -64,6 +63,32 @@ export class CocktailService {
         })
       );
   }
+  getIngredients(): Observable<Array<string>> {
+    const url = `${CocktailService.baseUrl}/list.php?i=list`;
+    return this.http.get(url)
+      .pipe(
+        map((result: { drinks: Array<{ strIngredient1: string }> }) => {
+          return result.drinks.map(d => d.strIngredient1)
+        })
+      );
+  }
+
+
+  getIngredientByName(name: string): Observable<Ingredient> {
+    const url = `${CocktailService.baseUrl}/search.php?i=${name}`;
+    return this.http.get(url)
+      .pipe(
+        map(( result: any ) => {
+          const { ingredients } = result
+          if (!ingredients.length) {
+            throw new Error(`Ingredient with name ${name} not found.`);
+          }
+
+          return ingredients[0];
+        })
+      );
+  }
+
 
   private mapResultToModel(cocktailDbResult: CocktailDbResult): Array<Cocktail> {
       const drinks = cocktailDbResult?.drinks || [];
