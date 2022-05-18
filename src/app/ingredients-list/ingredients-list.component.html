@@ -1,0 +1,25 @@
+<div class="container-fluid mt-4">
+    <!-- Bread Crumbs -->
+    <nav aria-label="breadcrumb mt-2">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Ingredients</li>
+      </ol>
+    </nav>
+  <div class="row mt-3 mb-3 text-center">
+    <h2 class="display">Our Ingredients</h2>
+  </div>
+    <div class="row">
+      <div class="col-xxl-3 col-md-4 col-6 ingredient-item mt-2 mb-2 px-2" *ngFor="let ingredient of ingredients$ | async">
+        <div class="card info-card"><a class="info" [routerLink]="['/ingredient-details', ingredient]">
+          <div class="card-body text-center">
+            {{ ingredient }}
+          </div>
+        </a>
+      </div>
+          
+        </div>
+        
+      </div>
+
+</div>
