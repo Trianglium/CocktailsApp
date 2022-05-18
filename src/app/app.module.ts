@@ -11,6 +11,9 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HighlightDirective } from './directives/highlight.directive';
+import { IngredientsListComponent } from './ingredients-list/ingredients-list.component';
+import { IngredientsDetailsComponent } from './ingredients-details/ingredients-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
     CocktailsListComponent,
     CocktailDetailsComponent,
     NotFoundPageComponent,
-    HomeComponent
+    HomeComponent,
+    HighlightDirective,
+    IngredientsListComponent,
+    IngredientsDetailsComponent
   ],
   imports: [
     BrowserModule,
