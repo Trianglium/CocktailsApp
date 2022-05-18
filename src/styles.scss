@@ -1,7 +1,7 @@
 @import '../node_modules/@cds/core/global.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
 
-// Theme 
+// Theme Colors 
 $soft-black: #222;
 $persian-pink: #f87c96;
 $alabaster-yellow: #f3f1e6;
@@ -9,6 +9,15 @@ $petite-orchid: #e29896;
 $viking-blue: #4ab2c1;
 $light-purple: #bfa1d0;
 $dark-purple: #8f7ca1;
+
+$dark-cornflower-purple: #5600b8;
+$cornflower-purple: #710fe2;
+$medium-cornflower-purple: #9444f0;
+$light-cornflower-purple: #b57df5;
+$bs-breadcrumb-item-active-color: #aeb5dc;
+
+$light-seagreen: #ec7d6932;
+$orangey: hsla(21, 76%, 75%, 0.451);
 
 
 // Layout and Structure 
@@ -19,7 +28,6 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
 }
 .flex-display-container {
     margin: 20px;
@@ -68,17 +76,51 @@ html, body {
     }
 }
 
+// Bread Crumbs 
+.breadcrumb-item {
+    font-weight: 700;
+    text-transform: uppercase;
+    a {
+        text-decoration: none;
+        color: $medium-cornflower-purple;
+    }
+    a:hover {
+        color: $dark-cornflower-purple;
+    }
+}
+.breadcrumb-item.active {
+    color: $bs-breadcrumb-item-active-color;
+}
 
 // Text Elements
+
+// Transform 
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+// Weight
+.text-thickest {
+    font-weight: 800;
+}
+.text-thick {
+    font-weight: 600;
+}
+
+// Position
 .text-center {
 	text-align: center;
 }
+
+// Font Families
 .font-sacromento {
     font-family: 'Sacramento', cursive;
 }
 .font-monstserrat {
     font-family: 'Montserrat', sans-serif;
 }
+
+// Text Colors 
 .text-light {
 	color: #fff;
 }
@@ -98,6 +140,9 @@ html, body {
     color: $dark-purple;
 }
 
+
+
+
 // Background colors
 .bg-orchid {
     background-color: $petite-orchid;
@@ -107,5 +152,21 @@ html, body {
     color: #fff;
 }
 
+.bg-yellow {
+    background-color: $light-seagreen;
+    color: $soft-black;
+}
+.footer {
+    .row {
+        max-width: 900px;
+
+    }
+    a {
+        font-weight: 500;
+    }
+    h4 {
+        font-weight: 600;
+    }
+}
 
 
