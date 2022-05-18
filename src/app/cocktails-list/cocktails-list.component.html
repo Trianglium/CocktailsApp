@@ -1,18 +1,35 @@
-<div class="flex-container">
-    <h2>Browse Cocktails</h2>
-    <div class="row">
-        <div class="col-sm-6" *ngFor="let cocktail of cocktails$ | async; index as i">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title">{{ cocktail.name }} <span class="badge">{{ cocktail.category }}</span></h2>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text">{{ cocktail.alcoholic }}</p>
-              <p class="card-text">{{ cocktail.glass }}</p>
-              <p class="card-text">{{ cocktail.ingredients.join(', ') }}</p>
-              <p>{{ i + 1 }}</p>
-            </div>
-          </div>
-        </div>
-  
-    </div>
+<div class="flex-container mt-4">
+  <!-- Bread Crumbs -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Cocktails</li>
+    </ol>
+  </nav>
+<div class="row  mt-4 mb-4">
+  <h2>Browse All Cocktails</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Cocktail Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">Alcoholic</th>
+        <th scope="col">Ingredients</th>
+        <th scope="col">Glass</th>
+        <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cocktail of cocktails$ | async; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ cocktail.name }}</td>
+        <td>{{ cocktail.category }}</td>
+        <td>{{ cocktail.alcoholic }}</td>
+        <td>{{ cocktail.ingredients.join(', ') }}</td>
+        <td>{{ cocktail.glass }}</td>
+        <td scope="col"><a [routerLink]="['/cocktail-details', cocktail.id]">See More</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
