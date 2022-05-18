@@ -1,13 +1,33 @@
-<div class="container mt-4 pt-4">
-    <div class="jumbotron">
-        <div class="card" *ngIf="cocktail">
-            <div class="card-body">
-            <h2 class="card-title">{{ cocktail.name }}</h2>
-            <p class="card-text">{{ cocktail.category }} {{ cocktail.alcoholic }}</p>
-            <p class="card-text">{{ cocktail.ingredients }}</p>
-            <a class="nav-link nav-text" class="btn btn-info">Back to Cocktails</a>
+<div class="container-fluid mt-4" *ngIf="cocktail">
+    <!-- Bread Crumbs -->
+    <nav aria-label="breadcrumb mt-2">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+          <li class="breadcrumb-item"><a [routerLink]="['/list']">Cocktails</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ cocktail.name }}</li>
+        </ol>
+      </nav>
+    <div class="jumbotron mt-3 px-5">
+        <h2 class="title">{{ cocktail.name }}</h2>
+    </div>
+    </div>
+    <div class="container">
+    <div class="row mt-3 mb-3 py-2 px-2">
+        <div class="col-lg-6 col-12 cocktail-img text-center">
+            <img [src]="cocktail.imageUrl" class="img-fluid rounded-start" alt="{{ cocktail.name }}">
+        </div>
+        <div class="col-lg-6 col-12">
+            <div class="card card-dark cocktail-card">
+                <div class="card-body">
+                    <h3>Ingredients</h3>
+                    <p class="card-text"><i><small class="text-muted">{{ cocktail.ingredients.join(', ') }}</small></i></p>
+                    <h3>Categories </h3>
+                    <p class="card-text"><i><small class="text-muted">{{ cocktail.category }}, {{ cocktail.alcoholic }}</small></i></p>
+                    <h3>Instructions</h3>
+                    <p class="card-text"><i><small class="text-muted">{{ cocktail.instructions }}</small></i></p>
+                </div>
             </div>
         </div>
-
     </div>
+
 </div>
