@@ -5,6 +5,12 @@ import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.co
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { HomeComponent } from './home/home.component';
 import { CocktailDetailsResolver } from './resolvers/cocktail-details.resolver';
+
+import { IngredientsListComponent } from './ingredients-list/ingredients-list.component';
+import { IngredientsDetailsComponent } from './ingredients-details/ingredients-details.component';
+import { IngredientDetailsResolver } from './resolvers/ingredient-details.resolver';
+
+
 const routes: Routes = [
   {
     path: 'home',
@@ -23,6 +29,21 @@ const routes: Routes = [
     component: CocktailDetailsComponent,
     resolve: {
       cocktail: CocktailDetailsResolver
+    }
+  },
+  {
+    path: 'ingredients-list',
+    component: IngredientsListComponent
+  },
+  {
+    path: 'ingredient-details',
+    component: IngredientsDetailsComponent
+  },
+  {
+    path: 'ingredient-details/:name',
+    component: IngredientsDetailsComponent,
+    resolve: {
+      ingredient: IngredientDetailsResolver
     }
   },
   {
