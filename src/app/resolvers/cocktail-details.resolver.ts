@@ -18,7 +18,7 @@ export class CocktailDetailsResolver implements Resolve<Observable<Cocktail>> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Cocktail> {
     const id = route.paramMap.get('id');
 
-    return this.cocktailService.getById('id');
+    return this.cocktailService.getById(id);
 
   }
 }
