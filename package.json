@@ -23,6 +23,8 @@
     "@clr/angular": "^13.3.0",
     "@clr/icons": "^13.0.2",
     "@clr/ui": "^13.3.0",
+    "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.1.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
