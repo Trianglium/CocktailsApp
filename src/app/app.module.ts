@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HighlightDirective } from './directives/highlight.directive';
 import { IngredientsListComponent } from './ingredients-list/ingredients-list.component';
 import { IngredientsDetailsComponent } from './ingredients-details/ingredients-details.component';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { IngredientsDetailsComponent } from './ingredients-details/ingredients-d
     HomeComponent,
     HighlightDirective,
     IngredientsListComponent,
-    IngredientsDetailsComponent
+    IngredientsDetailsComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,
