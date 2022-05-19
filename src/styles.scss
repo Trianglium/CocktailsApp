@@ -48,32 +48,32 @@ html, body {
 
 // NavBar
 .navbar {
-    display: block;
-    a {
-        text-decoration: none;
-    }
-    .branding {
-        float: left;
-        display: inline-block;
-        padding: .5em .5em;
-        margin: .5em .5em;
-        text-decoration: none;
-        font-weight: 800;
-    }
-    .header-nav {
-        background-color: $petite-orchid;
-        .nav-link {
-            display: inline-block;
-            padding: .5em .25em;
-            margin: .5em .5em;
-            text-decoration: none;
-            float: right;
-            font-weight: 600;
-            .title {
-                float: left;
-            }
-        }
-    }
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    --bs-navbar-color: rgba(229, 224, 233, 0.73);
+    --bs-navbar-hover-color: rgb(246, 240, 251);
+    --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
+    --bs-navbar-active-color: rgb(246, 240, 251);
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgba(228, 227, 227, 0.802);
+    --bs-navbar-brand-hover-color: rgb(255, 255, 255);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
+    --bs-navbar-toggler-border-radius: 0.375rem;
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
 
 // Bread Crumbs 
@@ -140,7 +140,9 @@ html, body {
     color: $dark-purple;
 }
 
-
+.text-yellow {
+    color: #f3f1e6;
+}
 
 
 // Background colors
@@ -151,17 +153,24 @@ html, body {
     background-color: $soft-black;
     color: #fff;
 }
-
-.bg-yellow {
-    background-color: $light-seagreen;
-    color: $soft-black;
+.bg-lightviolet {
+    background-color: #ca2ee9f3;
 }
-
 .bg-violet {
     background-color: #8545a1;
 }
+.bg-fadedviolet {
+    background-color: #8545a185;
+}
 .bg-purpleyblue {
     background-color:#4114b3;
+}
+.bg-fadednavy {
+    background-color:#4242a560;
+}
+
+.bg-purple {
+    background-color:#734aa4;
 }
 
 .footer {
