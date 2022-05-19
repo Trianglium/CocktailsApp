@@ -5,11 +5,11 @@ import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.co
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { HomeComponent } from './home/home.component';
 import { CocktailDetailsResolver } from './resolvers/cocktail-details.resolver';
-
 import { IngredientsListComponent } from './ingredients-list/ingredients-list.component';
 import { IngredientsDetailsComponent } from './ingredients-details/ingredients-details.component';
 import { IngredientDetailsResolver } from './resolvers/ingredient-details.resolver';
-
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -45,6 +45,17 @@ const routes: Routes = [
     resolve: {
       ingredient: IngredientDetailsResolver
     }
+  },
+  {
+    path: 'unauthorized',
+    component: UnauthorizedComponent
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+    canLoad: [
+      AuthGuard
+    ]
   },
   {
     path: '',
