@@ -15,6 +15,9 @@ export class AuthGuard implements CanActivate {
   canActivate(): true | UrlTree {
     return this.authenticateOrRedirect();
   }
+  canLoad(): true | UrlTree {
+    return this.authenticateOrRedirect();
+  }
 
   private authenticateOrRedirect() {
 
