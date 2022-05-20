@@ -1,0 +1,38 @@
+<div  class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-purple text-uppercase">
+      <div class="container-lg">
+        <a class="navbar-brand text-thickest" [routerLink]="['']">CocktailsAppAdmin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cocktailsAppLinks" aria-controls="cocktailsAppLinks" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="cocktailsAppLinks">
+          <div class="navbar-nav text-thick text-yellow">
+            <a class="nav-item nav-link" [routerLink]="['/admin']">Admin</a>
+            <a class="nav-item nav-link" [routerLink]="['/admin/dashboard']">Dashboard</a>
+            <a class="nav-item nav-link" [routerLink]="['/admin/users']">Users</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Main Content Section -->
+    <div  class="container-fluid px-5 mb-3">
+        <router-outlet></router-outlet>
+    </div>
+    
+    
+    
+    <!-- Footer Section -->
+    <div class="container-fluid mt-auto mb-2 bg-fadedviolet px-5 pt-4 pb-4">
+      <div class="container-xxl footer px-2 py-2">
+        <div class="row mx-4 center-text">
+          <div class="row mx-4 mt-2 mb-1 center-text">
+            <p class="muted">Copyright 2022 &copy; Jordan Brocker Rudow | <a class="footer-link" [routerLink]="['']">Site</a></p>
+          </div>
+    
+        </div> <!-- End Row-->
+    
+      </div>
+    </div>
+    </div>
