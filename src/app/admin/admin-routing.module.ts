@@ -4,6 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminComponent } from './admin.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { SettingsComponent } from './settings/settings.component';
+import { InfoComponent } from './info/info.component';
+
 
 
 const routes: Routes = [
@@ -12,12 +16,24 @@ const routes: Routes = [
         component: AdminComponent,
         children: [
             {
+                path: 'home',
+                component: AdminHomeComponent
+            },
+            {
                 path: 'dashboard',
                 component: DashboardComponent
             },
             {
                 path: 'users',
                 component: UsersComponent
+            },
+            {
+                path: 'settings',
+                component: SettingsComponent
+            },
+            {
+                path: 'info',
+                component: InfoComponent
             }
         ]
     }
