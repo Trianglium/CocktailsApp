@@ -1,18 +1,22 @@
-<div class="flex-container mt-4">
-    <!-- Bread Crumbs -->
-    <nav aria-label="breadcrumb">
+<div class="container-fluid mt-4" *ngIf="users">
+  <!-- Bread Crumbs -->
+  <nav aria-label="breadcrumb mt-2">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
-        <li class="breadcrumb-item"><a [routerLink]="['/admin']">Admin</a></li>
+          <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/admin']">Dashboard</a></li>
         <li class="breadcrumb-item active" aria-current="page">Users</li>
       </ol>
     </nav>
-    <div class="row mt-4 mb-4">
-        <div class="col-6">
-
-        </div>
-        <div class="col-6">
-
-        </div>
+  </div>
+  <div class="container">
+  <div class="row mt-3 mb-3 py-2 px-2">
+    <h2 class="title"></h2>
+    <div class="col-lg-6 col-12">
+          
     </div>
+    <div class="col-lg-6 col-12">
+          
+    </div>
+  </div>
+
 </div>
