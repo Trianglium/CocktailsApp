@@ -1,14 +1,14 @@
 <div  class="d-flex flex-column min-vh-100">
   <div class="row">
     <!-- Side Nav -->
-    <div class="col-4 mx-5 bg-light text-thick text-yellow text-uppercase" style="width: 4.5rem;">
+    <div class="col-3 mx-5 bg-light text-thick text-yellow text-uppercase" style="width: 4.5rem;">
       <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
         <!-- Cocktails App Icon -->
         <img class="img" src=".../favicon.png" width="16px" height="16px"/>
       </a>
       <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
         <li class="nav-item">
-          <a class="nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Admin" [routerLink]="['/admin']"> 
+          <a class="nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Admin Home Page" [routerLink]="['/admin/home']"> 
             <mat-icon aria-hidden="false" aria-label="Admin Home">assignment</mat-icon>
             <!-- Admin Icon -->
           </a>
@@ -27,13 +27,13 @@
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Settings">
+          <a href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Settings" [routerLink]="['/admin/settings']">
             <mat-icon aria-hidden="false" aria-label="Settings">settings</mat-icon>
             
           </a>
         </li>
         <li>
-          <a class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="More Info"[routerLink]="['/admin/users']">
+          <a class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="More Info"[routerLink]="['/admin/info']">
             <mat-icon aria-hidden="false" aria-label="More Information">info</mat-icon>
             <!-- Users Icon -->
           </a>
@@ -52,7 +52,7 @@
     <!-- End Side Nav-->
     
     <!-- Main Content Section -->
-    <div  class="col-7 px-5 mx-5">
+    <div  class="col-6 px-5 mx-5 mt-4">
         <router-outlet></router-outlet>
     </div>
   </div> <!-- End Row -->
