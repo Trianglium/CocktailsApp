@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AdminComponent {
   title = 'cocktails-app admin';
+
+  ngOnInit(): void {
+    
+}
+
+constructor(){ }
+
 }

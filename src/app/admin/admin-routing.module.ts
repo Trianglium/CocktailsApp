@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminComponent } from './admin.component';
+
+
 const routes: Routes = [
     {
-        path: 'admin',
-        component: DashboardComponent,
+        path: '',
+        component: AdminComponent,
         children: [
             {
                 path: 'dashboard',
                 component: DashboardComponent
             },
             {
-                path: '',
+                path: 'users',
                 component: UsersComponent
             }
         ]
@@ -21,10 +24,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-      CommonModule, 
-      RouterModule.forChild(routes)
-  ],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
   declarations: []
 })

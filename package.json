@@ -25,6 +25,7 @@
     "@clr/ui": "^13.3.0",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
+    "font-awesome": "^4.7.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

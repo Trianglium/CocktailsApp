@@ -1,38 +1,51 @@
 <div  class="d-flex flex-column min-vh-100">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-purple text-uppercase">
-      <div class="container-lg">
-        <a class="navbar-brand text-thickest" [routerLink]="['']">CocktailsAppAdmin</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cocktailsAppLinks" aria-controls="cocktailsAppLinks" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="cocktailsAppLinks">
-          <div class="navbar-nav text-thick text-yellow">
-            <a class="nav-item nav-link" [routerLink]="['/admin']">Admin</a>
-            <a class="nav-item nav-link" [routerLink]="['/admin/dashboard']">Dashboard</a>
-            <a class="nav-item nav-link" [routerLink]="['/admin/users']">Users</a>
-          </div>
-        </div>
+  <div class="row">
+    <!-- Side Nav -->
+    <div class="d-flex flex-column flex-shrink-0 bg-light text-thick text-yellow text-uppercase" style="width: 4.5rem;">
+      <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+        <!-- Cocktails App Icon -->
+        <img class="img" src=".../favicon.png" width="16px" height="16px"/>
+      </a>
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Admin" [routerLink]="['/admin']"> Admin
+            <!-- Admin Icon -->
+          </a>
+        </li>
+        <li>
+          <a class="nav-link py-3 border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard" [routerLink]="['/admin/dashboard']">
+            Dashboard <!-- Dashboard Icon -->
+            
+
+          </a>
+        </li>
+        <li>
+          <a class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders"[routerLink]="['/admin/users']">Users
+            <!-- Users Icon -->
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+            <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"></use></svg>
+          </a>
+        </li>
+      </ul>
+      <div class="dropdown border-top">
+        <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+          <!-- Admin User Icon / Profile Pic -->
+        </a>
+        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3" style="">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><hr class="dropdown-divider"></li>
+        </ul>
       </div>
-    </nav>
+    </div>
+    <!-- End Side Nav-->
     
     <!-- Main Content Section -->
-    <div  class="container-fluid px-5 mb-3">
+    <div  class="d-flex flex-column px-5 mb-3">
         <router-outlet></router-outlet>
     </div>
-    
-    
-    
-    <!-- Footer Section -->
-    <div class="container-fluid mt-auto mb-2 bg-fadedviolet px-5 pt-4 pb-4">
-      <div class="container-xxl footer px-2 py-2">
-        <div class="row mx-4 center-text">
-          <div class="row mx-4 mt-2 mb-1 center-text">
-            <p class="muted">Copyright 2022 &copy; Jordan Brocker Rudow | <a class="footer-link" [routerLink]="['']">Site</a></p>
-          </div>
-    
-        </div> <!-- End Row-->
-    
-      </div>
-    </div>
+  </div> <!-- End Row -->
+  
     </div>
