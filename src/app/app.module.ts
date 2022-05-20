@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClarityModule } from '@clr/angular';
 
+import {MatIconModule} from '@angular/material/icon';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CocktailsListComponent } from './cocktails-list/cocktails-list.component';
@@ -16,6 +18,7 @@ import { IngredientsListComponent } from './ingredients-list/ingredients-list.co
 import { IngredientsDetailsComponent } from './ingredients-details/ingredients-details.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { AdminModule } from './admin/admin.module'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,8 @@ import { AdminModule } from './admin/admin.module'
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    AdminModule
+    AdminModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
