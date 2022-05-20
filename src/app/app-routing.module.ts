@@ -27,6 +27,9 @@ const routes: Routes = [
   {
     path: 'cocktail-details/:id',
     component: CocktailDetailsComponent,
+    canActivate: [
+      AuthGuard
+    ],
     resolve: {
       cocktail: CocktailDetailsResolver
     }
