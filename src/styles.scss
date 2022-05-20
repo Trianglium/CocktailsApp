@@ -182,7 +182,19 @@ html, body {
         font-weight: 500;
     }
     h4 {
+        font-weight: 500;
+    }
+    p {
+        font-weight: 500;
+        color: #101024e9;
+    }
+    .footer-link {
         font-weight: 600;
+        text-decoration: none;
+        color: #1c1c54d5;
+    }
+    .footer-link:hover {
+        color: #3c3ce7e8;
     }
 }
 
