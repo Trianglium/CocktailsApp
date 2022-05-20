@@ -1,38 +1,47 @@
 <div  class="d-flex flex-column min-vh-100">
   <div class="row">
     <!-- Side Nav -->
-    <div class="d-flex flex-column flex-shrink-0 bg-light text-thick text-yellow text-uppercase" style="width: 4.5rem;">
+    <div class="col-4 mx-5 bg-light text-thick text-yellow text-uppercase" style="width: 4.5rem;">
       <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
         <!-- Cocktails App Icon -->
         <img class="img" src=".../favicon.png" width="16px" height="16px"/>
       </a>
       <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
         <li class="nav-item">
-          <a class="nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Admin" [routerLink]="['/admin']"> Admin
+          <a class="nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Admin" [routerLink]="['/admin']"> 
+            <mat-icon aria-hidden="false" aria-label="Admin Home">assignment</mat-icon>
             <!-- Admin Icon -->
           </a>
         </li>
         <li>
           <a class="nav-link py-3 border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard" [routerLink]="['/admin/dashboard']">
-            Dashboard <!-- Dashboard Icon -->
+            <mat-icon aria-hidden="false" aria-label="Dashboard">dashboard</mat-icon> <!-- Dashboard Icon -->
             
 
           </a>
         </li>
         <li>
-          <a class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders"[routerLink]="['/admin/users']">Users
+          <a class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Users" [routerLink]="['/admin/users']">
+            <mat-icon aria-hidden="false" aria-label="Manage Users">people</mat-icon>
             <!-- Users Icon -->
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
-            <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"></use></svg>
+          <a href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Settings">
+            <mat-icon aria-hidden="false" aria-label="Settings">settings</mat-icon>
+            
+          </a>
+        </li>
+        <li>
+          <a class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="More Info"[routerLink]="['/admin/users']">
+            <mat-icon aria-hidden="false" aria-label="More Information">info</mat-icon>
+            <!-- Users Icon -->
           </a>
         </li>
       </ul>
       <div class="dropdown border-top">
         <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
-          <!-- Admin User Icon / Profile Pic -->
+          <mat-icon aria-hidden="false" aria-label="Admin Panel Settings">admin_panel_settings</mat-icon>
         </a>
         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3" style="">
           <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -43,7 +52,7 @@
     <!-- End Side Nav-->
     
     <!-- Main Content Section -->
-    <div  class="d-flex flex-column px-5 mb-3">
+    <div  class="col-7 px-5 mx-5">
         <router-outlet></router-outlet>
     </div>
   </div> <!-- End Row -->
