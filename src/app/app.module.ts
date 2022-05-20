@@ -15,7 +15,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { IngredientsListComponent } from './ingredients-list/ingredients-list.component';
 import { IngredientsDetailsComponent } from './ingredients-details/ingredients-details.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
-
+import { AdminModule } from './admin/admin.module'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,8 @@ import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
     ClarityModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
