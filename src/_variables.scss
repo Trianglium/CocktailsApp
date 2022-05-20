@@ -1,30 +1,22 @@
 @import '../node_modules/@cds/core/global.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
 
-// Theme Colors 
-$soft-black: #222;
-$persian-pink: #f87c96;
-$alabaster-yellow: #f3f1e6;
-$petite-orchid: #e29896;
-$viking-blue: #4ab2c1;
-$light-purple: #bfa1d0;
-$dark-purple: #8f7ca1;
 
-$dark-cornflower-purple: #5600b8;
-$cornflower-purple: #710fe2;
-$medium-cornflower-purple: #9444f0;
-$light-cornflower-purple: #b57df5;
-$bs-breadcrumb-item-active-color: #aeb5dc;
-
-$light-seagreen: #ec7d6932;
-$orangey: hsla(21, 76%, 75%, 0.451);
-
-
+// Theme Colors
 $void: #0E0B16;
 $darkness: #5555560f;
 $fuschia: #A239CA;
 $jewel: #4717F6;
 $stark: #E7DFDD;
+$pure: #f3f1e6;
+
+
+// Util Colors
+$dark-cornflower-purple: #5600b8;
+$cornflower-purple: #710fe2;
+$medium-cornflower-purple: #9444f0;
+$light-cornflower-purple: #b57df5;
+$bs-breadcrumb-item-active-color: #aeb5dc;
 
 
 
@@ -32,7 +24,7 @@ $stark: #E7DFDD;
 html, body {
     font-weight: 400;
     font-size: 1.3em;
-    color: $soft-black;
+    color: $stark;
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -56,7 +48,7 @@ html, body {
     border-radius: .3rem;
   }
 
-// NavBar
+// Nav Bar
 .navbar {
     --bs-navbar-padding-x: 0;
     --bs-navbar-padding-y: 0.5rem;
@@ -102,9 +94,97 @@ html, body {
     color: $bs-breadcrumb-item-active-color;
 }
 
+
+// Footer
+.footer {
+    .row {
+        max-width: 900px;
+
+    }
+    a {
+        font-weight: 500;
+    }
+    h4 {
+        font-weight: 500;
+    }
+    p {
+        font-weight: 500;
+        color: $stark;
+    }
+    .footer-link {
+        font-weight: 600;
+        text-decoration: none;
+        color: #1c1c54d5;
+    }
+    .footer-link:hover {
+        color: #3c3ce7e8;
+    }
+}
+
+
+
+
+
+// Background and Border Colors
+
+.bg-dark {
+    background-color: $void;
+    color: $stark;
+}
+
+
+.bg-primary {
+    background-color: $void;
+    color: $stark;
+}
+
+.bg-secondary {
+    background-color: $darkness;
+    color: $stark;
+}
+
+
+.border-dark {
+    border: 3px solid $void;
+}
+
+.border-light {
+    border: 3px solid $stark;
+}
+
+.border-primary {
+    border: 3px solid $jewel;
+}
+
+.border-secondary {
+    border: 3px solid $fuschia;
+}
+
+
+
+
+
+
+
 // Text Elements
 
-// Transform 
+.text-dark {
+    color: $void;
+}
+
+.text-light {
+    color: $stark;
+}
+
+.text-primary {
+    color: $jewel;
+}
+
+.text-secondary {
+    color: $fuschia;
+}
+
+/ Transform 
 .text-uppercase {
     text-transform: uppercase;
 }
@@ -129,92 +209,3 @@ html, body {
 .font-monstserrat {
     font-family: 'Montserrat', sans-serif;
 }
-
-// Text Colors 
-.text-light {
-	color: $stark;
-}
-.text-dark {
-	color: $soft-black;
-}
-.text-danger {
-    color: $persian-pink;
-}
-.text-warning {
-    color: $petite-orchid;
-}
-.text-info {
-    color: $viking-blue
-}
-.text-success {
-    color: $dark-purple;
-}
-
-.text-yellow {
-    color: #f3f1e6;
-}
-
-
-// Background colors
-.bg-orchid {
-    background-color: $petite-orchid;
-}
-.bg-lightviolet {
-    background-color: #ca2ee9f3;
-}
-.bg-violet {
-    background-color: #8545a1;
-}
-.bg-fadedviolet {
-    background-color: #8545a185;
-}
-.bg-purpleyblue {
-    background-color:#4114b3;
-}
-.bg-fadednavy {
-    background-color:#4242a560;
-}
-
-.bg-purple {
-    background-color:#734aa4;
-}
-
-.bg-dark {
-    background-color: $void;
-    color: $stark;
-}
-.bg-void {
-    background-color: $void;
-}
-
-.bg-darkness {
-    background-color: $darkness;
-    color: $stark;
-}
-
-.footer {
-    .row {
-        max-width: 900px;
-
-    }
-    a {
-        font-weight: 500;
-    }
-    h4 {
-        font-weight: 500;
-    }
-    p {
-        font-weight: 500;
-        color: #101024e9;
-    }
-    .footer-link {
-        font-weight: 600;
-        text-decoration: none;
-        color: #1c1c54d5;
-    }
-    .footer-link:hover {
-        color: #3c3ce7e8;
-    }
-}
-
-
