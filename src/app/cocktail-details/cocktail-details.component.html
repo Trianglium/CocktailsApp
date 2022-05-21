@@ -17,14 +17,14 @@
             <img [src]="cocktail.imageUrl" class="img-fluid rounded" alt="{{ cocktail.name }}">
         </div>
         <div class="col-lg-6 col-12">
-            <div class="card card-dark cocktail-card">
-                <div class="card-body">
+            <div class="card bg-dark cocktail-card">
+                <div class="card-body text-light">
                     <h3>Ingredients</h3>
-                    <p class="card-text"><i><small class="text-muted">{{ cocktail.ingredients.join(', ') }}</small></i></p>
+                    <p class="card-text"><i><small>{{ cocktail.ingredients.join(', ') }}</small></i></p>
                     <h3>Categories </h3>
-                    <p class="card-text"><i><small class="text-muted">{{ cocktail.category }}, {{ cocktail.alcoholic }}</small></i></p>
+                    <p class="card-text"><i><small>{{ cocktail.category }}, {{ cocktail.alcoholic }}</small></i></p>
                     <h3>Instructions</h3>
-                    <p class="card-text"><i><small class="text-muted">{{ cocktail.instructions }}</small></i></p>
+                    <p class="card-text"><i><small>{{ cocktail.instructions }}</small></i></p>
                 </div>
             </div>
         </div>
