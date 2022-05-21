@@ -256,17 +256,12 @@ html, body {
 // Cocktail Details Table 
 
 tbody {
-    tr {
+    tr:hover {
+        color: $fuschia;
         td {
             a {
-                color: $jewel;
-            }
-            a:hover {
                 color: $fuschia;
             }
-        }
-        td:hover {
-            background-color: $jewel;
         }
     }
 }
