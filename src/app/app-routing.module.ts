@@ -32,7 +32,7 @@ const routes: Routes = [
     ],
     resolve: {
       cocktail: CocktailDetailsResolver
-    }
+    },
   },
   {
     path: 'ingredients-list',
@@ -50,15 +50,18 @@ const routes: Routes = [
     }
   },
   {
-    path: 'unauthorized',
-    component: UnauthorizedComponent
-  },
-  {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+    canActivate: [
+      AuthGuard
+    ],
     canLoad: [
       AuthGuard
     ]
+  },
+  {
+    path: 'unauthorized',
+    component: UnauthorizedComponent
   },
   {
     path: '',
