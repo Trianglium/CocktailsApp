@@ -7,16 +7,16 @@
           <li class="breadcrumb-item active" aria-current="page">{{ ingredient.strIngredient }}</li>
         </ol>
       </nav>
-    <div class="jumbotron mt-3">
+    <div class="jumbotron mt-3 border-primary">
         <h2 class="title">{{ ingredient.strIngredient }}</h2>
     </div>
     <div class="row mb-3 py-2 px-2">
         
         <div class="col-12 mt-3">
-            <div class="card card-dark ingredient-card">
-                <div class="card-body">
+            <div class="card ingredient-card bg-dark">
+                <div class="card-body text-light">
                     <h3>Description</h3>
-                    <p class="card-text"><i><small class="text-muted">{{ ingredient.strDescription }}</small></i></p>
+                    <p class="card-text"><i><small>{{ ingredient.strDescription }}</small></i></p>
                 </div>
             </div>
         </div>
