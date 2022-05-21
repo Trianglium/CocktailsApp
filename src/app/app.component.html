@@ -4,7 +4,7 @@
   <div class="container-lg">
     <a class="navbar-brand text-thickest" [routerLink]="['']">CocktailsApp</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cocktailsAppLinks" aria-controls="cocktailsAppLinks" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="text-light navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="cocktailsAppLinks">
       <div class="navbar-nav text-thick">
@@ -30,7 +30,9 @@
   <div class="container-xxl footer px-2 py-2">
     <div class="row mx-4 center-text">
       <div class="row mx-4 mt-2 mb-1 center-text">
-        <p><small class="text-light">Copyright 2022 &copy; CocktailsApp | <a class="footer-link" [routerLink]="['admin']">Admin</a></small></p>
+        <div class="col-12 text-center">
+          <p><small class="text-light">Copyright 2022 &copy; CocktailsApp | <a class="footer-link" [routerLink]="['admin']">Admin</a></small></p>
+        </div>
       </div>
 
     </div> <!-- End Row-->
