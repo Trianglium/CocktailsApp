@@ -1,13 +1,13 @@
 <div  class="d-flex flex-column min-vh-100">
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-purple text-uppercase">
+<nav class="navbar navbar-expand-lg bg-dark text-uppercase">
   <div class="container-lg">
     <a class="navbar-brand text-thickest" [routerLink]="['']">CocktailsApp</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cocktailsAppLinks" aria-controls="cocktailsAppLinks" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="cocktailsAppLinks">
-      <div class="navbar-nav text-thick text-yellow">
+      <div class="navbar-nav text-thick">
         <a class="nav-item nav-link" [routerLink]="['home']">Home</a>
         <a class="nav-item nav-link" [routerLink]="['list']">Cocktails</a>
         <a class="nav-item nav-link" [routerLink]="['ingredients-list']">Ingredients</a>
@@ -26,11 +26,11 @@
 
 
 <!-- Footer Section -->
-<div class="container-fluid mt-auto mb-2 bg-fadedviolet px-5 pt-4 pb-4">
+<div class="container-fluid mt-auto mb-2 bg-darkness px-5 pt-4 pb-4">
   <div class="container-xxl footer px-2 py-2">
     <div class="row mx-4 center-text">
       <div class="row mx-4 mt-2 mb-1 center-text">
-        <p class="muted">Copyright 2022 &copy; Jordan Brocker Rudow | <a class="footer-link" [routerLink]="['admin']">Admin</a></p>
+        <p><small class="text-light">Copyright 2022 &copy; CocktailsApp | <a class="footer-link" [routerLink]="['admin']">Admin</a></small></p>
       </div>
 
     </div> <!-- End Row-->
