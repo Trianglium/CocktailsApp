@@ -6,9 +6,9 @@
       <li class="breadcrumb-item active" aria-current="page">Cocktails</li>
     </ol>
   </nav>
-<div class="row  mt-4 mb-4">
+<div class="row  mt-4 mb-4 bg-dark">
   <h2 class="title">Browse All Cocktails</h2>
-  <table class="table table-responsive">
+  <table class="table table-responsive bg-dark">
     <thead>
       <tr>
         <th scope="col">id</th>
@@ -28,7 +28,7 @@
         <td>{{ cocktail.alcoholic }}</td>
         <td>{{ cocktail.ingredients.join(', ') }}</td>
         <td>{{ cocktail.glass }}</td>
-        <td scope="col"><a [routerLink]="['/cocktail-details', cocktail.id]">See More</a></td>
+        <td scope="col"><a [routerLink]="['/cocktail-details', cocktail.id]">Read More</a></td>
       </tr>
     </tbody>
   </table>
