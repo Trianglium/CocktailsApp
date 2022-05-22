@@ -20,8 +20,10 @@ $medium-cornflower-purple: #9444f0;
 $light-cornflower-purple: #b57df5;
 $bs-breadcrumb-item-active-color: #aeb5dc;
 
-
-
+// SVG Styling 
+svg {
+    fill: $stark;
+}
 // Layout and Structure 
 html, body {
     font-weight: 400;
@@ -183,6 +185,9 @@ html, body {
 }
 
 .text-secondary {
+    color: $fuschia;
+}
+.title-fuschia {
     color: $fuschia;
 }
 
